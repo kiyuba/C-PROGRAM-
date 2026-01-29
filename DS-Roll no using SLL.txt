@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct student{
+    long number;
+    struct student*nextwrd;
+};
+int main()
+{
+   
+    struct student*Rollno1=(struct student*)malloc(sizeof(struct student));
+     struct student*Rollno2=(struct student*)malloc(sizeof(struct student));
+   
+    
+     Rollno1->number;
+     Rollno2->number;
+     
+
+     printf("Enter The 1st Number: ");
+     scanf("%d",&Rollno1->number);
+     printf("Enter The 2nd Number :");
+     scanf("%d",&Rollno2->number);
+    
+     
+     //inter connect
+     Rollno1->nextwrd=Rollno2;
+     Rollno2->nextwrd=NULL;
+    
+     struct student*head=Rollno1;
+    printf("\n");
+     while(head!=0){
+         printf("Roll %d-->",head->number);
+         head=head->nextwrd;
+     }
+     printf("NULL");
+     return 0;
+     
+     }
