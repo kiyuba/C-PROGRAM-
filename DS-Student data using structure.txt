@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<string.h>
+struct structure{
+     int reg;
+    char name[20];
+    int mark1,mark2,mark3;
+};
+
+int main() {
+   struct structure stru1;
+   stru1.reg=40;
+  strcpy(stru1.name,"Nevitha");
+  stru1.mark1=75;
+  stru1.mark2=56;
+  stru1.mark3=37;
+   printf("The Roll no :%d \n",stru1.reg);
+   printf("The Name is:%s\n",stru1.name);
+   printf("The Mark of Analog ciruits:%d\n",stru1.mark1);
+   printf("The Mark of Signals and systems:%d\n",stru1.mark2);
+   printf("The Marks of EMTL:%d\n",stru1.mark3);
+    return 0;
+}
