@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+    float principal,final,rate;
+    int years;
+    printf("Enter the principal amount :\n");
+    scanf("%f",&principal);
+    printf("Enter the rate power :\n");
+    scanf("%f",&rate);
+    printf("Enter the number of years:\n");
+    scanf("%d",&years);
+    final = principal*pow((1+rate/100),years);
+    printf("The final amount is %.2f",final);
+
+    return 0;
+}
