@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct contact{
+    long number;
+    struct contact*nextwrd;
+};
+int main()
+{
+   
+    struct contact*phoneno1=(struct contact*)malloc(sizeof(struct contact));
+     struct contact*phoneno2=(struct contact*)malloc(sizeof(struct contact));
+     struct contact*phoneno3=(struct contact*)malloc(sizeof(struct contact));
+     phoneno1->number;
+     phoneno2->number;
+     phoneno3->number;
+     printf("Enter The 1st Number: ");
+     scanf("%d",&phoneno1->number);
+     printf("Enter The 2nd Number :");
+     scanf("%d",&phoneno2->number);
+     printf("Enter The 3rd Number:");
+     scanf("%d",&phoneno3->number);
+     //inter connect
+     phoneno1->nextwrd=phoneno2;
+     phoneno2->nextwrd=phoneno3;
+     phoneno3->nextwrd=NULL;
+     struct contact*head=phoneno1;
+    printf("\n");
+     while(head!=0){
+         printf("%ld-->",head->number);
+         head=head->nextwrd;
+     }
+     printf("NULL");
+     return 0;
+     
+     }

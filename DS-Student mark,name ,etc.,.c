@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+struct structure{
+    int rollno;
+    char section;
+    float cgpa;
+    char name[10];
+};
+int main()
+{
+    struct structure stru1;
+    stru1.rollno = 40;
+    stru1.section = 'b';
+    stru1.cgpa = 8.9;
+    strcpy(stru1.name,"nevi");
+    
+    printf("The rollno is:%d \n", stru1.rollno);
+    printf("The section is:%c \n", stru1.section);
+    printf("The cgpa is:%.f", stru1.cgpa);
+    printf("The name is : %s", stru1.name);
+    return 0;
+
+}

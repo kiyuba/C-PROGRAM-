@@ -1,0 +1,40 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+struct Department{
+    int deptId;
+    char deptName[30];
+    
+};
+ struct Employee{
+     int empId;
+     char empName[30];
+     struct Department dept;
+ };
+ 
+
+int main() {
+ struct Employee emp;
+ struct Employee *ptr;
+ ptr = &emp;
+ 
+ printf("Enter Employee ID: ");
+ scanf("%d", ptr->empId);
+ 
+    // Write C code here
+    printf("Enter Employee Name: ");
+    scanf("%s", ptr->empName);
+    
+    printf("Enter Department ID: ");
+    scanf("%d", ptr->dept.deptId);
+    
+    printf("Enter Department Name:");
+    scanf("%s", ptr->dept.deptName);
+    
+    printf("\n--- Employee Details---\n");
+    printf("Employeee ID: %d\n", ptr->empId);
+    printf("Employeee NAME: %s\n", ptr->empName);
+    printf("Department ID: %d\n", ptr->dept.deptId);
+    printf("Department NAME: %s\n", ptr->dept.deptName);
+
+    return 0;
+}
